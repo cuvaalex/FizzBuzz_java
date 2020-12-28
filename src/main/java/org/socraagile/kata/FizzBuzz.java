@@ -9,9 +9,9 @@ public class FizzBuzz {
         if(number % 5 == 0){
             message += "Buzz";
         }
-        if(message.isEmpty()){
-            return String.valueOf(number);
+        if (!message.isEmpty()) {
+            return message;
         }
-        return message;
+        return String.valueOf(number);
     }
 }
