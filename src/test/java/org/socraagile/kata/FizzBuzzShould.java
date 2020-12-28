@@ -32,11 +32,11 @@ public class FizzBuzzShould {
         assertThat(result).isEqualTo("Fizz");
     }
 
-    @DisplayName("Return Buzz when number is 5")
-    @Test
-    void return_Buzz_when_number_is_5() {
+    @DisplayName("Return Buzz when number is multiple 5")
+    @ParameterizedTest
+    @ValueSource(ints = {5, 10})
+    void return_Buzz_when_number_is_multiple_of_5(int number) {
         FizzBuzz fizzBuzz = new FizzBuzz();
-        int number = 5;
 
         String result = fizzBuzz.compute(number);
 
