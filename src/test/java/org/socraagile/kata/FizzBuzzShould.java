@@ -39,10 +39,10 @@ public class FizzBuzzShould {
         assertThat(result).isEqualTo("Buzz");
     }
 
-    @DisplayName("Return FizzBuzz when number is 15")
-    @Test
-    public void return_FizzBuZZ_when_number_is_15() {
-        int number = 15;
+    @DisplayName("Return FizzBuzz when number is multiple of 5 and 3")
+    @ParameterizedTest
+    @ValueSource(ints = {15, 30})
+    public void return_FizzBuzz_when_number_is_multiple_of_5_and_3(int number) {
 
         String result = fizzBuzz.compute(number);
 

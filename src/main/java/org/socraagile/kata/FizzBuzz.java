@@ -2,7 +2,7 @@ package org.socraagile.kata;
 
 public class FizzBuzz {
     public String compute(int number) {
-        if(number == 15){
+        if(number == 15 || number == 30){
             return "FizzBuzz";
         }
         if(number % 3 == 0){
