@@ -41,7 +41,7 @@ public class FizzBuzzShould {
 
     @DisplayName("Return FizzBuzz when number is multiple of 5 and 3")
     @ParameterizedTest
-    @ValueSource(ints = {15, 30})
+    @ValueSource(ints = {15, 30, 45})
     public void return_FizzBuzz_when_number_is_multiple_of_5_and_3(int number) {
 
         String result = fizzBuzz.compute(number);

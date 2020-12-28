@@ -2,15 +2,16 @@ package org.socraagile.kata;
 
 public class FizzBuzz {
     public String compute(int number) {
-        if(number == 15 || number == 30){
-            return "FizzBuzz";
-        }
+        String message = "";
         if(number % 3 == 0){
-            return "Fizz";
+            message += "Fizz";
         }
         if(number % 5 == 0){
-            return "Buzz";
+            message += "Buzz";
         }
-        return String.valueOf(number);
+        if(message.isEmpty()){
+            return String.valueOf(number);
+        }
+        return message;
     }
 }
