@@ -34,7 +34,7 @@ public class FizzBuzzShould {
 
     @DisplayName("Return Buzz when number is multiple 5")
     @ParameterizedTest
-    @ValueSource(ints = {5, 10})
+    @ValueSource(ints = {5, 10, 20})
     void return_Buzz_when_number_is_multiple_of_5(int number) {
         FizzBuzz fizzBuzz = new FizzBuzz();
 
