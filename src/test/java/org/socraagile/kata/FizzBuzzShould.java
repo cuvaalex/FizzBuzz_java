@@ -22,10 +22,10 @@ public class FizzBuzzShould {
     }
 
     @DisplayName("Return Fizz when number is 3")
-    @Test
-    void return_Fizz_when_number_is_3() {
+    @ParameterizedTest
+    @ValueSource(ints = {3, 6})
+    void return_Fizz_when_number_is_multiple_of_3(int number) {
         FizzBuzz fizzBuzz = new FizzBuzz();
-        int number = 3;
 
         String result = fizzBuzz.compute(number);
 
