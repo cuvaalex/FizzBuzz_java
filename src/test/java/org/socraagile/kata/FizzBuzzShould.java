@@ -21,7 +21,7 @@ public class FizzBuzzShould {
         assertThat(result).isEqualTo(String.valueOf(number));
     }
 
-    @DisplayName("Return Fizz when number is 3")
+    @DisplayName("Return Fizz when number is multiple of 3")
     @ParameterizedTest
     @ValueSource(ints = {3, 6, 9})
     void return_Fizz_when_number_is_multiple_of_3(int number) {
@@ -30,6 +30,17 @@ public class FizzBuzzShould {
         String result = fizzBuzz.compute(number);
 
         assertThat(result).isEqualTo("Fizz");
+    }
+
+    @DisplayName("Return Buzz when number is 5")
+    @Test
+    void return_Buzz_when_number_is_5() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int number = 5;
+
+        String result = fizzBuzz.compute(number);
+
+        assertThat(result).isEqualTo("Buzz");
     }
 
 }
